@@ -1,0 +1,1 @@
+# plugins-quick-view-and-buy-now-for-woocommerce
