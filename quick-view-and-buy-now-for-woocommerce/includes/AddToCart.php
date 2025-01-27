@@ -265,6 +265,10 @@ class AddToCart {
 			wp_enqueue_style( 'photoswipe-default-skin' );
 		}
 
+		if ( 'blocksy' === get_template() ) {
+			wp_enqueue_style( 'ct-flexy-styles' );
+		}
+
 		add_action( 'wp_footer', array( $this, 'include_woocommerce_photoswipe' ) );
 
 		if ( ! wp_script_is( 'wc-add-to-cart-variation' ) ) {

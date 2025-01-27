@@ -385,7 +385,7 @@ class Popup {
 	 */
 	public function adjust_hooks_before_quick_view_popup( $popup_content, $product ) {
 		// Remove after the summary sections.
-		remove_all_actions( 'woocommerce_after_single_product_summary' );
+		// remove_all_actions( 'woocommerce_after_single_product_summary' );
 
 		// Check if additional sections enabled in the popup.
 		if ( Settings::is_quick_view_popup_section_global_enabled( 'data_tabs' ) ) {

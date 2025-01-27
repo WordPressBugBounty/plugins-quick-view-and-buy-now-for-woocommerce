@@ -9,10 +9,10 @@ namespace GPLSCore\GPLS_PLUGIN_ARCW;
  * Author URI:   https://profiles.wordpress.org/grandplugins/
  * Plugin URI:   https://grandplugins.com/product/quick-view-and-buy-now-for-woocommerce/
  * Domain Path:  /languages
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Text Domain:  quick-view-and-buy-now-for-woocommerce
  * Std Name:     gpls-arcw-quick-view-buy-now-for-woocommerce
- * Version:      1.5.10
+ * Version:      1.6
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

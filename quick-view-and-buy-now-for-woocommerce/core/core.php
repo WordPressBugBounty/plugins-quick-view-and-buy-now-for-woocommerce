@@ -81,6 +81,72 @@ class Core {
 		$this->core_assets_path = $this->core_path . 'assets';
 		$this->core_assets_url  = $this->core_url . 'assets';
 		$this->plugins_list     = array(
+			'woo-name-you-price'              => array(
+				'title'     => 'Woo Name Your Price',
+				'desc'      => 'Empower your website with Woo Name Your Price. Let shoppers set their own prices for your WooCommerce products, boosting engagement and sales flexibility.',
+				'thumbnail' => 'woo-name-your-price.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-name-your-price/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-customers-cleanup'           => array(
+				'title'     => 'Woo Customers Cleanup',
+				'desc'      => 'Automatically remove WooCommerce customer accounts with no orders to keep your database clean and efficient.',
+				'thumbnail' => 'woo-customers-cleanup.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-customers-cleanup/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-limited-offers'              => array(
+				'title'     => 'Woo Limited Offers',
+				'desc'      => 'Limit WooCommerce sale prices by specific quantities,! Limited Offers for WooCommerce lets you set sales like Amazon with claimed percentage tracking.',
+				'thumbnail' => 'woo-limited-offer.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-limited-offers/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-order-uploader'              => array(
+				'title'     => 'Woo Order Uploader',
+				'desc'      => 'Enhance customer experience with Order Uploader for WooCommerce. Upload, manage, and share files seamlessly between customers and store admins.',
+				'thumbnail' => 'woo-order-uploader.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-order-uploader/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-lemonsqueezy-checkout'       => array(
+				'title'     => 'Woo Lemonsqueezy Checkout',
+				'desc'      => 'Integrate Lemonsqueezy payment gateway with WooCommerce. Accept payments, manage subscriptions, and streamline your digital product sales effortlessly.',
+				'thumbnail' => 'woo-lemonsqueezy-checkout.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-lemonsqueezy-gateway/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-paypal-checkout'             => array(
+				'title'     => 'Woo Paypal Checkout',
+				'desc'      => 'integrates PayPal payment options seamlessly into your WooCommerce store. It allows customers to complete purchases directly from checkout, single product page, and shop pages with ease.',
+				'thumbnail' => 'woo-paypal-checkout.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-paypal-checkout/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-gift-cards'                  => array(
+				'title'     => 'Woo Gift Cards',
+				'desc'      => 'Sell gift cards easily on your WooCommerce sites. Create simple, variable gift cards, generate gift cards manually and automatically and send customized gift cards emails to customers.',
+				'thumbnail' => 'woo-gift-cards.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-gift-cards/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-bulk-price-stock'            => array(
+				'title'     => 'Woo Bulk Price & Stock Manager',
+				'desc'      => 'Update price and stock for your WooCommerce store in bulk easily',
+				'thumbnail' => 'woo-bulk-price-&-stock.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-bulk-price-change/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-paddle-checkout'             => array(
+				'title'     => 'Woo Paddle Checkout',
+				'desc'      => 'Integrates Paddle\'s secure payment gateway into your WooCommerce website allowing customers to make secure and hassle-free payments and subscriptions through Paddle for their orders.....',
+				'thumbnail' => 'woo-paddle-checkout.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-restrict-orders'             => array(
+				'title'     => 'Woo Restrict Orders',
+				'desc'      => 'Secure your WooCommerce store from spam users making spam orders',
+				'thumbnail' => 'woo-restrict-orders.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-restrict-orders/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-sales-notifications'         => array(
+				'title'     => 'Woo Sales notifications',
+				'desc'      => 'boost your e-commerce store\'s sales and build customer trust. displaying real-time, eye-catching sales notifications on your website, notifying potential customers of recent product purchases..',
+				'thumbnail' => 'woo-sales-notification.png',
+				'pro_link'  => 'https://grandplugins.com/product/woo-sales-notification/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			),
 			'woo-advanced-add-to-cart' => array(
 				'title'     => 'Woo Advanced Add To Cart',
 				'desc'      => 'Add To cart in bulk, custom prices and more...',

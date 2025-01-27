@@ -1,10 +1,10 @@
 === Direct Checkout - Quick View - Buy Now For WooCommerce  ===
 Tags: direct checkout, quick view, buy now, quick add to cart, one click checkout, fast checkout, popup, quick view popup,  woocommerce
-Tested up to: 6.5
+Tested up to: 6.7
 Requires at least: 4.5.0
-Requires PHP: 5.4
-Version: 1.5.10
-Stable Tag: 1.5.10
+Requires PHP: 7.0
+Version: 1.6
+Stable Tag: 1.6
 Contributors: GrandPlugins
 Author: GrandPlugins
 Donate link: https://ko-fi.com/grandplugins
@@ -116,27 +116,37 @@ The plugin offers many features in both Free and Pro Versions.
 
 == Check Our other plugins ==
 
-[Woo Gift Cards](https://grandplugins.com/product/woo-gift-cards/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Recurring Sale](https://grandplugins.com/product/woo-recurring-sale/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Restrict Orders](https://grandplugins.com/product/woo-restrict-orders/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Name Your Price](https://grandplugins.com/product/woo-name-your-price/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Bulk Price & Stock Manager](https://grandplugins.com/product/woo-bulk-price-change/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Lemonsqueezy Checkout](https://grandplugins.com/product/woo-lemonsqueezy-gateway/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Variation Sold individually](https://grandplugins.com/product/woo-variation-sold-individually/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Limited Offers](https://grandplugins.com/product/woo-limited-offer/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Paddle Checkout](https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Order Uploader](https://grandplugins.com/product/woo-order-uploader/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Sales notifications](https://grandplugins.com/product/woo-sales-notification/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Gift Cards](https://grandplugins.com/product/woo-gift-cards/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Real time Cart Tracker](https://grandplugins.com/product/woo-cart-tracker/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Restrict Orders](https://grandplugins.com/product/woo-restrict-orders/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Woo Best Sellers](https://grandplugins.com/product/woo-best-seller/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Bulk Price & Stock Manager](https://grandplugins.com/product/woo-bulk-price-change/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[Advanced Captcha](https://grandplugins.com/product/woo-advanced-captcha/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Variation Sold individually](https://grandplugins.com/product/woo-variation-sold-individually/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[WooCommerce Advanced Bundles](https://grandplugins.com/product/woo-advanced-add-to-cart/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Paddle Checkout](https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
-[WooCommerce Advanced Pricing - Discounts & Quantity Swatches](https://grandplugins.com/product/woo-advanced-pricing/?utm_source=free&utm_medium=gpls-avfstw-avif-support)
+[Woo Sales notifications](https://grandplugins.com/product/woo-sales-notification/?utm_source=free&utm_medium=quick-view-and-buy-now)
+
+[Woo Real time Cart Tracker](https://grandplugins.com/product/woo-cart-tracker/?utm_source=free&utm_medium=quick-view-and-buy-now)
+
+[Woo Best Sellers](https://grandplugins.com/product/woo-best-seller/?utm_source=free&utm_medium=quick-view-and-buy-now)
+
+[Advanced Captcha](https://grandplugins.com/product/woo-advanced-captcha/?utm_source=free&utm_medium=quick-view-and-buy-now)
+
+[WooCommerce Advanced Bundles](https://grandplugins.com/product/woo-advanced-add-to-cart/?utm_source=free&utm_medium=quick-view-and-buy-now)
+
+[WooCommerce Advanced Pricing - Discounts & Quantity Swatches](https://grandplugins.com/product/woo-advanced-pricing/?utm_source=free&utm_medium=quick-view-and-buy-now)
 
 [Image Sizes Controller](https://wordpress.org/plugins/image-sizes-controller/)
 

@@ -280,11 +280,25 @@ class Settings {
 		self::$plugin_info        = $plugin_info;
 		$this->settings_tab_key   = self::$plugin_info['name'] . '-settings-tab';
 		self::$settings_name      = self::$plugin_info['name'] . '-main-settings-name';
+
+		$this->hooks();
+	}
+
+	/**
+	 * Start Setup.
+	 * 
+	 * @return void
+	 */
+	public function start_setup() {
 		$this->settings_tab       = array( $this->settings_tab_key => esc_html__( 'Quick View and Buy Now', 'woocommrece' ) );
 		$this->current_active_tab = isset( $_GET['tab'] ) ? sanitize_text_field( $_GET['tab'] ) : 'quick_view';
 		$this->init();
 		self::$settings = self::get_main_settings();
-		$this->hooks();
+
+		foreach ( array_keys( $this->settings_tab ) as $name ) {
+			add_action( 'woocommerce_settings_' . $name, array( $this, 'settings_tab_action' ), 10 );
+			add_action( 'woocommerce_update_options_' . $name, array( $this, 'save_settings' ), 10 );
+		}
 	}
 
 	/**
@@ -316,11 +330,9 @@ class Settings {
 	 * @return void
 	 */
 	public function hooks() {
+		add_action( 'init', array( $this, 'start_setup' ) );
 		add_filter( 'woocommerce_settings_tabs_array', array( $this, 'add_settings_tab' ), 100, 1 );
-		foreach ( array_keys( $this->settings_tab ) as $name ) {
-			add_action( 'woocommerce_settings_' . $name, array( $this, 'settings_tab_action' ), 10 );
-			add_action( 'woocommerce_update_options_' . $name, array( $this, 'save_settings' ), 10 );
-		}
+
 		add_action( 'woocommerce_sections_' . $this->settings_tab_key, array( $this, 'settings_tabs' ), 100 );
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'settings_page_assets' ) );

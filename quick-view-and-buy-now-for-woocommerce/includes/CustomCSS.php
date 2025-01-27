@@ -47,7 +47,6 @@ class CustomCSS {
 		self::$plugin_info = $plugin_info;
 		self::$settings    = Settings::get_main_settings();
 
-		$this->setup_settings_fields();
 		$this->hooks();
 	}
 
@@ -86,11 +85,21 @@ class CustomCSS {
 	}
 
 	/**
+	 * Start Setup.
+	 * 
+	 * @return void
+	 */
+	public function start_setup() {
+		$this->setup_settings_fields();
+	}
+
+	/**
 	 * Filters and Actions Hooks.
 	 *
 	 * @return void
 	 */
 	public function hooks() {
+		add_action( 'init', array( $this, 'start_setup' ) );
 		add_filter( self::$plugin_info['name'] . '-settings-fields', array( $this, 'add_custom_css_fields' ), 100, 1 );
 	}
 
