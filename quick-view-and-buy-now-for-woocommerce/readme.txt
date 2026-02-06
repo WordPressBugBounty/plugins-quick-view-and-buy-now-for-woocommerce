@@ -1,10 +1,10 @@
 === Direct Checkout - Quick View - Buy Now For WooCommerce  ===
 Tags: direct checkout, quick view, buy now, quick add to cart, one click checkout, fast checkout, popup, quick view popup,  woocommerce
-Tested up to: 6.7
+Tested up to: 6.9
 Requires at least: 4.5.0
 Requires PHP: 7.0
-Version: 1.6
-Stable Tag: 1.6
+Version: 1.7
+Stable Tag: 1.7
 Contributors: GrandPlugins
 Author: GrandPlugins
 Donate link: https://ko-fi.com/grandplugins

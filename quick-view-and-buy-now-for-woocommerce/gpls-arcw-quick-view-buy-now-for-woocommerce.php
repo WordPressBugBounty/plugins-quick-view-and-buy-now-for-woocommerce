@@ -12,7 +12,7 @@ namespace GPLSCore\GPLS_PLUGIN_ARCW;
  * Requires PHP: 7.0
  * Text Domain:  quick-view-and-buy-now-for-woocommerce
  * Std Name:     gpls-arcw-quick-view-buy-now-for-woocommerce
- * Version:      1.6
+ * Version:      1.7
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
