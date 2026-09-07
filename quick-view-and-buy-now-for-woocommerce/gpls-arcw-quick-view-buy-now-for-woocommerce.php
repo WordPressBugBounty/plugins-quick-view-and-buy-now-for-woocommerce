@@ -12,7 +12,7 @@ namespace GPLSCore\GPLS_PLUGIN_ARCW;
  * Requires PHP: 7.0
  * Text Domain:  quick-view-and-buy-now-for-woocommerce
  * Std Name:     gpls-arcw-quick-view-buy-now-for-woocommerce
- * Version:      1.7
+ * Version:      1.8
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -213,6 +213,89 @@ if ( ! class_exists( __NAMESPACE__ . '\GPLS_ARCW_Quick_View_And_Buy_Now_For_WooC
 			new ScreenLoader( self::$core, self::$plugin_info );
 			new QuantityInput( self::$core, self::$plugin_info );
 			new CustomCSS( self::$core, self::$plugin_info );
+
+			self::funnel();
+		}
+
+		/**
+		 * Contextual upgrade prompts.
+		 *
+		 * Both offers are measured from the shop itself. They are passed as a
+		 * closure so their strings are translated when the notice renders -
+		 * this plugin boots on plugins_loaded, and translating before init
+		 * trips WordPress 6.7's "translation loading triggered too early".
+		 *
+		 * @return void
+		 */
+		private static function funnel() {
+			if ( ! class_exists( '\GPLS_Funnel' ) || ! function_exists( 'wc_get_products' ) ) {
+				return;
+			}
+
+			\GPLS_Funnel::boot(
+				array(
+					'slug'       => 'quick-view-and-buy-now-for-woocommerce',
+					'name'       => 'Direct Checkout, Quick View and Buy Now',
+					'textdomain' => 'quick-view-and-buy-now-for-woocommerce',
+					'cap'        => 'manage_woocommerce',
+					'screens'    => array(
+						'edit-product',
+						'tools_page_' . self::$plugin_info['name'],
+					),
+					'offers'     => function () {
+						return array(
+							array(
+								'id'         => 'loop_buy_now',
+								'product'    => 'quick-view-and-buy-now-for-woocommerce',
+								'when'       => function () {
+									$count = (int) wp_count_posts( 'product' )->publish;
+
+									// Under a handful of products nobody is
+									// browsing a shop page in the first place.
+									return $count >= 10 ? array( 'products' => $count ) : false;
+								},
+								'stat'       => '{products}',
+								'stat_label' => esc_html__( 'products', 'quick-view-and-buy-now-for-woocommerce' ),
+								'title'      => esc_html__( 'Your shop lists {products} products with no Buy Now button', 'quick-view-and-buy-now-for-woocommerce' ),
+								'body'       => esc_html__( 'Quick View saves a page load on those listings, but a shopper who has already decided still has to add to cart and then go and find the checkout. Premium puts Buy Now on shop and category pages, and can hide Add to Cart so there is one button instead of two.', 'quick-view-and-buy-now-for-woocommerce' ),
+								'cta'        => esc_html__( 'See what Premium adds', 'quick-view-and-buy-now-for-woocommerce' ),
+							),
+							array(
+								'id'         => 'sales_without_deadline',
+								'product'    => 'simple-countdown-timer',
+								'when'       => function () {
+									if ( ! function_exists( 'wc_get_product_ids_on_sale' ) ) {
+										return false;
+									}
+
+									$dateless = 0;
+
+									foreach ( wc_get_product_ids_on_sale() as $id ) {
+										$product = wc_get_product( $id );
+
+										if ( ! $product ) {
+											continue;
+										}
+
+										$to = $product->get_date_on_sale_to();
+
+										if ( ! $to || $to->getTimestamp() <= time() ) {
+											$dateless++;
+										}
+									}
+
+									return $dateless >= 3 ? array( 'dateless' => $dateless ) : false;
+								},
+								'stat'       => '{dateless}',
+								'stat_label' => esc_html__( 'no deadline', 'quick-view-and-buy-now-for-woocommerce' ),
+								'title'      => esc_html__( '{dateless} of your products are on sale with no end date', 'quick-view-and-buy-now-for-woocommerce' ),
+								'body'       => esc_html__( 'A lower price is a fact. A lower price that ends on Friday is a reason to buy today. Simple Countdown Timer reads the sale end date WooCommerce already stores and shows a countdown on the product page.', 'quick-view-and-buy-now-for-woocommerce' ),
+								'cta'        => esc_html__( 'See Simple Countdown Timer', 'quick-view-and-buy-now-for-woocommerce' ),
+							),
+						);
+					},
+				)
+			);
 		}
 
 		/**
@@ -222,6 +305,7 @@ if ( ! class_exists( __NAMESPACE__ . '\GPLS_ARCW_Quick_View_And_Buy_Now_For_WooC
 		 */
 		public function includes() {
 			require_once trailingslashit( plugin_dir_path( __FILE__ ) ) . 'core/bootstrap.php';
+			require_once trailingslashit( plugin_dir_path( __FILE__ ) ) . 'includes/Funnel.php';
 		}
 
 		/**

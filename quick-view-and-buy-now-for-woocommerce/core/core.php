@@ -80,168 +80,77 @@ class Core {
 		$this->core_url         = plugin_dir_url( __FILE__ );
 		$this->core_assets_path = $this->core_path . 'assets';
 		$this->core_assets_url  = $this->core_url . 'assets';
+		
+		// Ordered by relevance to a WooCommerce shop, then by what each
+		// product has actually earned. The previous order put seven
+		// never-sold plugins in the first eight slots and left the three
+		// best sellers at positions 19, 20 and 24.
 		$this->plugins_list     = array(
-			'woo-name-you-price'              => array(
-				'title'     => 'Woo Name Your Price',
-				'desc'      => 'Empower your website with Woo Name Your Price. Let shoppers set their own prices for your WooCommerce products, boosting engagement and sales flexibility.',
-				'thumbnail' => 'woo-name-your-price.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-name-your-price/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-customers-cleanup'           => array(
-				'title'     => 'Woo Customers Cleanup',
-				'desc'      => 'Automatically remove WooCommerce customer accounts with no orders to keep your database clean and efficient.',
-				'thumbnail' => 'woo-customers-cleanup.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-customers-cleanup/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-limited-offers'              => array(
-				'title'     => 'Woo Limited Offers',
-				'desc'      => 'Limit WooCommerce sale prices by specific quantities,! Limited Offers for WooCommerce lets you set sales like Amazon with claimed percentage tracking.',
-				'thumbnail' => 'woo-limited-offer.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-limited-offers/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-order-uploader'              => array(
-				'title'     => 'Woo Order Uploader',
-				'desc'      => 'Enhance customer experience with Order Uploader for WooCommerce. Upload, manage, and share files seamlessly between customers and store admins.',
-				'thumbnail' => 'woo-order-uploader.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-order-uploader/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-lemonsqueezy-checkout'       => array(
-				'title'     => 'Woo Lemonsqueezy Checkout',
-				'desc'      => 'Integrate Lemonsqueezy payment gateway with WooCommerce. Accept payments, manage subscriptions, and streamline your digital product sales effortlessly.',
-				'thumbnail' => 'woo-lemonsqueezy-checkout.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-lemonsqueezy-gateway/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-paypal-checkout'             => array(
-				'title'     => 'Woo Paypal Checkout',
-				'desc'      => 'integrates PayPal payment options seamlessly into your WooCommerce store. It allows customers to complete purchases directly from checkout, single product page, and shop pages with ease.',
-				'thumbnail' => 'woo-paypal-checkout.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-paypal-checkout/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-gift-cards'                  => array(
-				'title'     => 'Woo Gift Cards',
-				'desc'      => 'Sell gift cards easily on your WooCommerce sites. Create simple, variable gift cards, generate gift cards manually and automatically and send customized gift cards emails to customers.',
-				'thumbnail' => 'woo-gift-cards.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-gift-cards/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-bulk-price-stock'            => array(
-				'title'     => 'Woo Bulk Price & Stock Manager',
-				'desc'      => 'Update price and stock for your WooCommerce store in bulk easily',
-				'thumbnail' => 'woo-bulk-price-&-stock.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-bulk-price-change/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-paddle-checkout'             => array(
-				'title'     => 'Woo Paddle Checkout',
-				'desc'      => 'Integrates Paddle\'s secure payment gateway into your WooCommerce website allowing customers to make secure and hassle-free payments and subscriptions through Paddle for their orders.....',
-				'thumbnail' => 'woo-paddle-checkout.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-restrict-orders'             => array(
-				'title'     => 'Woo Restrict Orders',
-				'desc'      => 'Secure your WooCommerce store from spam users making spam orders',
-				'thumbnail' => 'woo-restrict-orders.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-restrict-orders/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-sales-notifications'         => array(
-				'title'     => 'Woo Sales notifications',
-				'desc'      => 'boost your e-commerce store\'s sales and build customer trust. displaying real-time, eye-catching sales notifications on your website, notifying potential customers of recent product purchases..',
-				'thumbnail' => 'woo-sales-notification.png',
-				'pro_link'  => 'https://grandplugins.com/product/woo-sales-notification/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-advanced-add-to-cart' => array(
-				'title'     => 'Woo Advanced Add To Cart',
-				'desc'      => 'Add To cart in bulk, custom prices and more...',
-				'thumbnail' => 'woo-advanced-add-to-cart.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-advanced-add-to-cart/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-advanced-pricing' => array(
-				'title'     => 'Woo Advanced Pricing',
-				'desc'      => 'Apply all types of Quantity based pricing models',
-				'thumbnail' => 'woo-advanced-pricing.webp',
-				'pro_link'  => 'https://grandplugins.com/product/woo-advanced-pricing/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-best-seller' => array(
-				'title'     => 'Woo Best Sellers',
-				'desc'      => '',
-				'thumbnail' => 'woo-best-sellers.webp',
-				'free_link' => 'https://wordpress.org/plugins/best-seller-for-woocommerce/',
-				'pro_link'  => 'https://grandplugins.com/product/woo-best-seller/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'image-sizes-controller' => array(
-				'title'     => 'Image Sizes Controller',
-				'desc'      => 'Control your website image sizes, create custom image sizes and disable generating unneeded sizes.',
-				'thumbnail' => 'image-sizes-controller.png',
-				'free_link' => 'https://wordpress.org/plugins/image-sizes-controller/',
-				'pro_link'  => 'https://grandplugins.com/product/image-sizes-controller/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'simple-countdown-timer' => array(
-				'title'     => 'Simple Countdown Timer',
-				'desc'      => 'Add countdown timers easily to your WordPress website',
-				'thumbnail' => 'simple-countdown-timer.gif',
-				'free_link' => 'https://wordpress.org/plugins/simple-countdown/',
-				'pro_link'  => 'https://grandplugins.com/product/simple-countdown-timer/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'wp-watermark-pdf' => array(
-				'title'     => 'WP Watermark PDF',
-				'desc'      => 'Add text and image watermarks to your PDF files easily with our watermark PDFs plugin.',
-				'thumbnail' => 'wp-watermark-pdf.png',
-				'free_link' => 'https://wordpress.org/plugins/watermark-pdf/',
-				'pro_link'  => 'https://grandplugins.com/product/wp-watermark-pdf/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
-			'woo-cart-limiter' => array(
-				'title'     => 'WooCommerce Cart Limiter',
-				'desc'      => 'Control your website cart, limit cart totals, products count and quantity, limit products based on other products in cart, set minimum and maxmium quantity limits and more...',
-				'thumbnail' => 'woo-cart-limiter.jpg',
-				'free_link' => 'https://wordpress.org/plugins/cart-limiter/',
-				'pro_link'  => 'https://grandplugins.com/product/woo-cart-limiter/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
-			),
 			'woo-coming-soon' => array(
 				'title'     => 'WooCommerce Coming Soon Products',
 				'desc'      => 'Set your products to coming soon mode with countdown timer.',
 				'thumbnail' => 'woo-coming-soon.png',
 				'free_link' => 'https://wordpress.org/plugins/coming-soon-products-for-woocommerce/',
-				'pro_link'  => 'https://grandplugins.com/product/woo-coming-soon-products/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+				'pro_link'  => 'https://grandplugins.com/product/woo-coming-soon-products/?utm_source=free&utm_medium=sidebar&utm_term=woo-coming-soon-products&utm_content=' . $this->plugin_info['name'],
 			),
 			'wp-watermark-images' => array(
 				'title'     => 'WP Watermark Images',
 				'desc'      => 'protect your images by watermarking them with text and image watermarks using the most advanced watermarking plugin',
 				'thumbnail' => 'wp-watermark-images.png',
 				'free_link' => 'https://wordpress.org/plugins/watermark-images-for-wp-and-woo-grandpluginswp/',
-				'pro_link'  => 'https://grandplugins.com/product/wp-images-watermark/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+				'pro_link'  => 'https://grandplugins.com/product/wp-images-watermark/?utm_source=free&utm_medium=sidebar&utm_term=wp-images-watermark&utm_content=' . $this->plugin_info['name'],
 			),
-			'woo-quick-view' => array(
-				'title'     => 'WooCommerce Quick View and Buy Now',
-				'desc'      => 'Increase your website conversion rate, encourage your visitors to buy from your website using quick view and buy now buttons with direct checkout.',
-				'thumbnail' => 'woo-quick-view-and-buy-now.png',
-				'free_link' => 'https://wordpress.org/plugins/quick-view-and-buy-now-for-woocommerce/',
-				'pro_link'  => 'https://grandplugins.com/product/quick-view-and-buy-now-for-woocommerce/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			'simple-countdown-timer' => array(
+				'title'     => 'Simple Countdown Timer',
+				'desc'      => 'Add countdown timers easily to your WordPress website',
+				'thumbnail' => 'simple-countdown-timer.gif',
+				'free_link' => 'https://wordpress.org/plugins/simple-countdown/',
+				'pro_link'  => 'https://grandplugins.com/product/simple-countdown-timer/?utm_source=free&utm_medium=sidebar&utm_term=simple-countdown-timer&utm_content=' . $this->plugin_info['name'],
 			),
-			'wp-gif-editor'   => array(
-				'title'     => 'WP GIF Uploader',
-				'desc'      => 'Upload GIF images without losing the GIF animation in the uploaded gif and all generated subsizes.',
-				'thumbnail' => 'wp-gif-editor.gif',
-				'free_link' => 'https://wordpress.org/plugins/gif-uploader-wp-grandplugins',
-				'pro_link'  => 'https://grandplugins.com/product/wp-gif-editor/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			'woo-paddle-checkout'             => array(
+				'title'     => 'Woo Paddle Checkout',
+				'desc'      => 'Integrates Paddle\'s secure payment gateway into your WooCommerce website allowing customers to make secure and hassle-free payments and subscriptions through Paddle for their orders.....',
+				'thumbnail' => 'woo-paddle-checkout.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=sidebar&utm_term=woo-paddle-checkout&utm_content=' . $this->plugin_info['name'],
 			),
-			'woo-maintenance-mode' => array(
-				'title'     => 'Woo Maintenance Mode',
-				'desc'      => '',
-				'thumbnail' => 'woo-maintenance-mode.png',
-				'free_link' => 'https://wordpress.org/plugins/ultimate-maintenance-mode-for-woocommerce/',
-				'pro_link'  => 'https://grandplugins.com/product/woocommerce-maintenance-mode-pro/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+			'woo-lemonsqueezy-checkout'       => array(
+				'title'     => 'Woo Lemonsqueezy Checkout',
+				'desc'      => 'Integrate Lemonsqueezy payment gateway with WooCommerce. Accept payments, manage subscriptions, and streamline your digital product sales effortlessly.',
+				'thumbnail' => 'woo-lemonsqueezy-checkout.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-lemonsqueezy-gateway/?utm_source=free&utm_medium=sidebar&utm_term=woo-lemonsqueezy-gateway&utm_content=' . $this->plugin_info['name'],
 			),
 			'pdf-password-protected' => array(
 				'title'     => 'PDF Password Protect',
 				'desc'      => '',
 				'thumbnail' => 'pdf-password-protect.gif',
 				'free_link' => 'https://wordpress.org/plugins/pdf-password-protect/',
-				'pro_link'  => 'https://grandplugins.com/product/pdf-password-protect/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+				'pro_link'  => 'https://grandplugins.com/product/pdf-password-protect/?utm_source=free&utm_medium=sidebar&utm_term=pdf-password-protect&utm_content=' . $this->plugin_info['name'],
 			),
-			'wp-paypal_subscriptions' => array(
-				'title'     => 'WP Paypal Subscriptions',
+			'woo-best-seller' => array(
+				'title'     => 'Woo Best Sellers',
 				'desc'      => '',
-				'thumbnail' => 'wp-paypal-subscriptions.png',
-				'free_link' => 'https://wordpress.org/plugins/gpls-paypal-subscriptions/',
-				'pro_link'  => 'https://grandplugins.com/product/wp-paypal-subscriptions/?utm_source=free&utm_medium=sidebar&utm_content=' . $this->plugin_info['name'],
+				'thumbnail' => 'woo-best-sellers.webp',
+				'free_link' => 'https://wordpress.org/plugins/best-seller-for-woocommerce/',
+				'pro_link'  => 'https://grandplugins.com/product/woo-best-seller/?utm_source=free&utm_medium=sidebar&utm_term=woo-best-seller&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-maintenance-mode' => array(
+				'title'     => 'Woo Maintenance Mode',
+				'desc'      => '',
+				'thumbnail' => 'woo-maintenance-mode.png',
+				'free_link' => 'https://wordpress.org/plugins/ultimate-maintenance-mode-for-woocommerce/',
+				'pro_link'  => 'https://grandplugins.com/product/woocommerce-maintenance-mode-pro/?utm_source=free&utm_medium=sidebar&utm_term=woocommerce-maintenance-mode-pro&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-advanced-pricing' => array(
+				'title'     => 'Woo Advanced Pricing',
+				'desc'      => 'Apply all types of Quantity based pricing models',
+				'thumbnail' => 'woo-advanced-pricing.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-advanced-pricing/?utm_source=free&utm_medium=sidebar&utm_term=woo-advanced-pricing&utm_content=' . $this->plugin_info['name'],
+			),
+			'woo-customers-cleanup'           => array(
+				'title'     => 'Woo Customers Cleanup',
+				'desc'      => 'Automatically remove WooCommerce customer accounts with no orders to keep your database clean and efficient.',
+				'thumbnail' => 'woo-customers-cleanup.webp',
+				'pro_link'  => 'https://grandplugins.com/product/woo-customers-cleanup/?utm_source=free&utm_medium=sidebar&utm_term=woo-customers-cleanup&utm_content=' . $this->plugin_info['name'],
 			),
 		);
 	}

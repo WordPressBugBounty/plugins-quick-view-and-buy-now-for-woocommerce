@@ -1,10 +1,10 @@
-=== Direct Checkout - Quick View - Buy Now For WooCommerce  ===
+=== Direct Checkout - Quick View - Buy Now For WooCommerce ===
 Tags: direct checkout, quick view, buy now, quick add to cart, one click checkout, fast checkout, popup, quick view popup,  woocommerce
-Tested up to: 6.9
+Tested up to: 7.1
 Requires at least: 4.5.0
 Requires PHP: 7.0
-Version: 1.7
-Stable Tag: 1.7
+Version: 1.8
+Stable Tag: 1.8
 Contributors: GrandPlugins
 Author: GrandPlugins
 Donate link: https://ko-fi.com/grandplugins
@@ -12,6 +12,8 @@ Plugin URI: https://grandplugins.com/product/quick-view-and-buy-now-for-woocomme
 Author email: services@grandplugins.com
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+
+Quick View popups and Buy Now buttons for WooCommerce, so shoppers can see a product and buy it without leaving the page.
 
 
 == Description ==
@@ -114,68 +116,23 @@ The plugin offers many features in both Free and Pro Versions.
 3. Settings page in `WooCommerce/Settings/Quick View and Buy Now` tab
 
 
-== Check Our other plugins ==
+== Other Plugins for the Same Job ==
 
-[Woo Recurring Sale](https://grandplugins.com/product/woo-recurring-sale/?utm_source=free&utm_medium=quick-view-and-buy-now)
+These are the ones that pair with a faster checkout.
 
-[Woo Name Your Price](https://grandplugins.com/product/woo-name-your-price/?utm_source=free&utm_medium=quick-view-and-buy-now)
+[Simple Countdown Timer](https://grandplugins.com/product/simple-countdown-timer/?utm_source=free&utm_medium=readme&utm_content=quick-view-and-buy-now-for-woocommerce&utm_term=simple-countdown-timer) &mdash; put a deadline on a sale. It reads the sale end date WooCommerce already stores and counts down to it on the product page.
 
-[Woo Lemonsqueezy Checkout](https://grandplugins.com/product/woo-lemonsqueezy-gateway/?utm_source=free&utm_medium=quick-view-and-buy-now)
+[Coming Soon Products](https://grandplugins.com/product/woo-coming-soon-products/?utm_source=free&utm_medium=readme&utm_content=quick-view-and-buy-now-for-woocommerce&utm_term=woo-coming-soon-products) &mdash; tease a product before it goes on sale, and collect interest while it is still hidden.
 
-[Woo Limited Offers](https://grandplugins.com/product/woo-limited-offer/?utm_source=free&utm_medium=quick-view-and-buy-now)
+[Paddle Checkout](https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=readme&utm_content=quick-view-and-buy-now-for-woocommerce&utm_term=woo-paddle-checkout) &mdash; take payments through Paddle, with subscriptions and tax handled for you.
 
-[Woo Order Uploader](https://grandplugins.com/product/woo-order-uploader/?utm_source=free&utm_medium=quick-view-and-buy-now)
+[Browse everything](https://grandplugins.com/product-category/plugin/?utm_source=free&utm_medium=readme&utm_content=quick-view-and-buy-now-for-woocommerce&utm_term=browse_all)
 
-[Woo Gift Cards](https://grandplugins.com/product/woo-gift-cards/?utm_source=free&utm_medium=quick-view-and-buy-now)
+== Changelog ==
 
-[Woo Restrict Orders](https://grandplugins.com/product/woo-restrict-orders/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Bulk Price & Stock Manager](https://grandplugins.com/product/woo-bulk-price-change/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Variation Sold individually](https://grandplugins.com/product/woo-variation-sold-individually/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Paddle Checkout](https://grandplugins.com/product/woo-paddle-checkout/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Sales notifications](https://grandplugins.com/product/woo-sales-notification/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Real time Cart Tracker](https://grandplugins.com/product/woo-cart-tracker/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Woo Best Sellers](https://grandplugins.com/product/woo-best-seller/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Advanced Captcha](https://grandplugins.com/product/woo-advanced-captcha/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[WooCommerce Advanced Bundles](https://grandplugins.com/product/woo-advanced-add-to-cart/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[WooCommerce Advanced Pricing - Discounts & Quantity Swatches](https://grandplugins.com/product/woo-advanced-pricing/?utm_source=free&utm_medium=quick-view-and-buy-now)
-
-[Image Sizes Controller](https://wordpress.org/plugins/image-sizes-controller/)
-
-[WooCommerce Cart Limiter](https://wordpress.org/plugins/cart-limiter/)
-
-[WP Watermark Images](https://wordpress.org/plugins/watermark-images-for-wp-and-woo-grandpluginswp/)
-
-[Coming Soon Products for WooCommerce](https://wordpress.org/plugins/coming-soon-products-for-woocommerce)
-
-[WooCommerce Cart and Order Limiter](https://wordpress.org/plugins/cart-limiter/)
-
-[Simple Countdown](https://wordpress.org/plugins/simple-countdown/)
-
-[Watermark PDF](https://wordpress.org/plugins/watermark-pdf/)
-
-[WooCommerce Maintenance Mode](https://wordpress.org/plugins/ultimate-maintenance-mode-for-woocommerce/)
-
-[Sidebars Gutenberg Blocks](https://wordpress.org/plugins/sidebars-blocks/)
-
-[Large Images Uploader](https://wordpress.org/plugins/large-images-uploader/)
-
-[Maintenance Mode for WooCommerce](https://wordpress.org/plugins/ultimate-maintenance-mode-for-woocommerce/)
-
-[Single Ajax Add to Cart For WooCommerce](https://wordpress.org/plugins/ajax-single-add-to-cart-for-woocommerce/)
-
-[GIF Uploader](https://wordpress.org/plugins/gif-uploader-wp-grandplugins)
-
-[PDF Password Protect](https://wordpress.org/plugins/pdf-password-protect/)
-
-[Paypal Subscriptions](https://wordpress.org/plugins/gpls-paypal-subscriptions/)
-
-[WP Plugin Creator](https://wpplugincreator.com)
+= 1.8 =
+* Added: a note on the Products screen pointing out that shop and category pages have no Buy Now button.
+* Added: a note when products are on sale with no end date.
+* Both read your own shop, are dismissible, and stay quiet for a month once dismissed.
+* Changed: added the short description, which was missing, and rewrote the list of related plugins.
+* Changed: the plugins shown in the settings sidebar are now ten relevant ones rather than twenty-four, led by the ones shop owners actually use.
